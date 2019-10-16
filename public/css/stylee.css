@@ -1,0 +1,922 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	outline-style: none;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+
+body{
+	margin-top: 150px;
+	height:100%;
+	background-image: url('/imgs/back.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+nav{
+	font-weight: bold;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: whitesmoke;
+	z-index: 1;
+
+
+}
+.navbar-container{
+
+	height: 60px;
+	border-bottom: 2px solid black;
+	
+}
+.logo{
+	border: 2px solid black;
+	border-radius: 50% ;
+	position: absolute;
+	right: 85%;
+	top: 10px;
+	height: 100px;
+	width: 100px;
+}
+.menu{
+	display: flex;
+	justify-content: center;
+	margin:auto;
+
+}
+@media only screen and (max-width: 1400px) {
+  .menu {
+   max-width:700px;
+  }
+  .logo{
+      top:20px;
+      height: 80px;
+      width: 80px;
+      
+  }
+}
+
+.menu li{
+	display: block;
+	height:60px;
+	width: 200px;
+	font-size: 14px;
+	text-align: center;
+} 
+
+.menu > li > a {
+	padding-top: 25px;
+	display: block;
+	height: 35px;
+	width: 100%;
+	color: black;
+}
+.menu >li:hover{
+	background-color: black;
+}
+.menu >  li:hover >a{
+	color:lightgray;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.dropdown-content li a{
+	padding-top: 15px;
+	display: block;
+	height: 40px;
+	width: 100%;
+	color: black;
+}
+
+.dropdown-content li:hover{
+	color: black;
+	background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.logout{
+	height: 47px;
+	width: 100%;
+	background: none;
+	border:none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.mark-as-read{
+	border: none;
+	position:relative;
+	right: -80px;
+	top:-30px;
+}
+.mark-as-read:hover{
+	cursor: pointer;
+	font-size: 16px;
+	color: red;
+}
+
+.search-bar{
+
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*box-shadow: 0px 4px 16px 3px rgba(8,8,8,1);*/
+	height: 60px
+
+}
+.search-bar form input[type= text]{
+	border: 1px solid black;
+
+	padding-left: 10px;
+	height: 35px;
+	width: 300px;
+	border-radius: 5px;
+	font-size: 17px;
+}
+.search-bar form button{
+	background-color:rgba(234, 53, 0,0.8);
+	border:1px solid black;
+	border-radius: 6px;
+	height: 35px;
+	width: 70px;
+	color: whitesmoke;
+	margin-left: 10px;
+	font-size: 17px;
+	cursor: pointer;
+}
+.search-bar form button:hover{
+
+	box-shadow: 1px 1px 5px;
+	background-color:rgba(234, 53, 0,0.85);
+	color: black;
+
+}
+/* Main content */
+body > h1{
+	font-weight:200;
+	margin-top: 30px;
+	text-align: center;
+
+}
+.adds-div{
+	
+	box-shadow: 1px 1px 5px;
+	margin:  20px auto;	
+	height: 22vh;
+	width:60vw;
+	background-color: antiquewhite;
+	background-image: url('/imgs/autumnsale_700.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+} 
+body > h2{
+	text-align: center;
+	font-weight: 200;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.filter{
+	display:flex;
+	justify-content: center;
+
+}
+.filter-block{
+	display: inline-block;
+
+}
+.filter-block select{
+	height:30px;
+	width:100px;
+
+
+}
+.filter-block input{
+
+	width:80px;
+
+	margin: 0px 5px;
+	padding-left: 10px;
+
+
+}
+
+  .filter button{
+  	width: 40px;
+  	height: 40px;
+  	border-radius: 50%;
+  	margin-left: 20px;
+	padding-top: 10px;
+	background-image: url('https://pt.seaicons.com/wp-content/uploads/2017/02/Button-Refresh-icon.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+  }
+  .filter button:hover{
+  	box-shadow:0px 0px 2px 2px;
+  }
+  .container{
+  	max-width: 1500px;
+  	border-top: 1px dashed black;
+  	width: 90vw;
+  	margin: auto;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;	
+  }
+  .card{
+  	background: whitesmoke;
+  	box-shadow: 1px 1px 5px;
+  	height: 300px;
+  	width: 200px;
+  	margin: 10px;
+  }
+  .card:hover{
+  	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+  }
+  .mt{
+  	margin-top: 50px;
+  }
+  .image img{
+  	object-fit:cover; 
+  	border-bottom: 2px solid black;
+  	height: 150px;
+  	width: 100%;
+  }
+  .faicon{
+  	display:flex;
+  	justify-content: center;
+  	align-items: center;
+  	height: 150px;
+  	font-size: 100px;
+  	color: gray;
+
+
+  }
+
+  .title{
+  	background-color: whitesmoke;
+  	font-size: 20px;
+  	padding: 5px;
+  	text-align: center;
+  	height: 40px;	
+  }
+  .price{
+  	background-color: antiquewhite;
+
+  	text-align: center;
+  	height: 25px;
+  	padding: 5px;
+  	font-size: 25px;
+  	margin-top: -5px;
+  }
+  .time{
+
+  	font-size: 12px;
+  	float: right;
+  	padding-top: 3px;
+  	padding-right: 10px;
+  }
+  .btn-div{
+  	margin-top: 10px;
+  	display: flex;
+  	justify-content: center;
+  }
+
+  .button{
+  	box-shadow: 1px 1px 5px;
+  	height: 35px;
+  	width: 150px;
+  	font-size: 14px;
+
+  }
+  .button:hover{
+  	cursor: pointer;
+  	font-size: 16px;
+  	border: 1px solid black;
+  }
+
+  .pagination{
+  	margin-top: 30px;
+  	display:flex;
+  	justify-content: center;
+  }
+  .pagination li{
+  	display:flex;
+  	justify-content: center;
+  	align-content: center;
+  	align-items: center;
+  	height: 30px;
+  	width: 30px;
+  	border: 1px solid black;
+  	border-radius: 15px;
+  	margin: 5px;
+  	font-size: 18px;
+  	box-shadow: 1px 1px 5px;
+  	background-color: whitesmoke;
+
+
+  }
+  .pagination li a{
+
+  	padding-top: 10px;
+  	text-align: center;
+  	display: block;
+  	width: 100%;
+  	height: 100%;
+  }
+  .pagination li:hover{
+  	box-shadow: 2px 2px 5px;
+
+  }
+  /*article view style*/
+  .article-container{
+  	background-color: white;
+  	box-shadow: 1px 1px 5px;
+  	margin: auto;
+  	margin-top: 20px;
+  	width:800px;
+  	min-height: 600px;
+  }
+  .article-title{
+  	text-decoration: bold
+  }
+  .user-options{
+
+  	margin: auto;
+  	width: 300px;
+  	display: flex;
+  	justify-content: center;
+  }
+  .user-options button{
+  	height: 30px;
+  	margin: 20px;
+  	width: 100px;
+  	border: 1px solid black;
+  	box-shadow: 1px 1px ;
+  	font-size: 16px;
+
+
+  }
+  .user-options button:hover{
+  	box-shadow: 1px 1px 5px;
+  	font-size: 17px;
+
+  }
+  .image-view{
+  	display: none;
+  	justify-content: center;
+
+  }
+  .image-view img{
+  	border: 70px solid black;
+  	box-shadow: 1px 1px 5px;
+  	position: absolute;
+  	height: 500px;
+  	margin: auto;
+  	z-index: 1;
+  }
+
+  .info-container{
+  	display:inline-flex;
+  }
+  .article-info-image {
+  	padding: 20px;
+  }
+  .article-info-image div{
+
+  	border: 1px solid white;
+  	box-shadow: 1px 1px 5px;
+  	width: 250px;
+  	height: 300px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+
+  }
+  .article-info{
+
+  	width: 450px;
+  	height: 200px;
+  	padding: 20px;
+  }
+  .article-info p{
+  	margin-bottom: 10px;
+
+  }
+  .article-info h1{
+  	margin-top: 12px;
+  	font-weight: 200;
+  }
+  .boxes{
+  	display:flex;
+  }
+  .article-info .box{
+  	margin-top:  20px;
+  	margin-right: 20px;
+
+  	border-radius: 3px;
+  	width: auto;
+  	min-width: 100px;
+  	box-shadow: 1px 1px 3px;
+  }	
+  .article-info .box p{
+  	border-top-left-radius: 3px;
+  	border-top-right-radius: 3px;
+  	margin: 0px;
+  	text-align: center;
+  	padding: 10px;	
+  }
+
+
+  .top{
+  	background-color: rgba(234, 53, 0,0.8);
+  }
+  .cond{
+  	background-color:#fb9224
+  }
+  .user{
+  	background-color: #eccd8f;
+  }
+  .date{
+  	background-color: antiquewhite;
+  	text-align: right;
+  	font-size: 14px;
+  	margin-top:10px;
+  }
+  .article-images{
+  	box-shadow: 1px 1px 5px;
+  	display: flex;
+  	justify-content: center;
+  	width: 410px;
+  	height: 100px;
+  	background-color:white;
+	flex-wrap:wrap;
+  	overflow: hidden;
+  	
+  	
+  }
+  .article-images:hover{
+  	
+  	overflow: scroll;
+	width: 430px;
+	height:auto;
+	max-height: 400px;
+
+
+  }
+  .article-images img{
+
+  	object-fit:cover; 
+  	box-shadow: 1px 1px 5px;
+  	margin: 5px 5px;
+  	height: 90px;
+  	width: 90px;
+  	background-position: center;
+  }
+  .article-images img:hover{
+  	cursor: pointer;
+
+  }
+  .article-description{
+  	margin: auto;
+  	width:750px;
+  	min-height:  200px;
+  	border-top: 1px dashed gray;
+  	padding-top: 30px;
+  	padding-bottom: 30px;
+
+  }
+  .pl{
+  	padding-left: 25px;
+  }
+
+  .desc{
+  	padding: 20px 40px;
+  	border:none;
+  	font-size: 18px;
+  }
+
+
+  .comment-section{
+
+  	list-style: none;
+  	max-width: 800px;
+  	width: 100%;
+  	margin: 50px auto;
+  	padding: 10px;
+  }
+  .comment-section >p{
+  	padding: 10px;
+  	border-bottom: 1px dashed black;
+  	margin-bottom: 40px;
+  }
+
+  .comment{
+  	display: flex;
+  	border-radius: 3px;
+  	margin-bottom: 45px;
+  	flex-wrap: wrap;
+  }
+
+  .comment.user-comment{
+  	color:  #808080;
+  }
+
+  .comment.author-comment{
+  	color:  #60686d;
+  	justify-content: flex-end;
+  }
+
+  /* User and time info */
+
+  .comment .info{
+  	width: 17%;
+  	margin-left: 40px;
+
+  }
+
+  .comment.user-comment .info{
+  	text-align: right;
+  	margin-right:40px;
+  	margin-left: 0px;
+  }
+
+  .comment.author-comment .info{
+  	order: 3;
+  }
+
+
+  .comment .info a{	/* User name */
+  	display: block;
+  	text-decoration: none;
+  	color: #656c71;
+  	font-weight: bold;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	padding: 10px 0 3px 0;
+  }
+
+  .comment .info span{	/* Time */
+  	font-size: 11px;
+  	color:  #9ca7af;
+  }
+
+  /* The comment text */
+
+  .comment p{
+  	box-shadow: 1px 1px 5px;
+  	border-radius: 5px;
+  	line-height: 1.5;
+  	padding: 18px 22px;
+  	width: 50%;
+  	position: relative;
+  	word-wrap: break-word;
+  	color: black
+
+  }
+
+  .comment.user-comment p{
+  	background-color: antiquewhite;
+  }
+
+  .comment.author-comment p{
+  	background-color:  #e2f8ff;
+  	order: 1;
+  }
+
+
+
+
+
+
+  /* Comment form */
+
+  .write-new{
+  	margin: 80px auto 0;
+  	width: 50%;
+  }
+
+  .write-new textarea{
+  	color:  #444;
+  	font: inherit;
+
+  	outline: 0;
+  	border-radius: 3px;
+  	border: 1px solid #cecece;
+  	background-color:  #fefefe;
+  	box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.06);
+  	overflow: auto;
+
+  	width:100%;
+  	min-height: 80px;
+  	padding: 15px 20px;
+  }
+
+
+  .write-new button{
+  	float:right;
+  	background-color:  #87bae1;
+  	box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.12);
+  	border-radius: 2px;
+  	border: 0;
+  	color: black;
+  	font-weight: bold;
+  	cursor: pointer;
+
+  	padding: 10px 25px;
+  	margin-top: 18px;
+  }
+  .delete-comment{
+  	width:50px;
+  	position: relative;
+  	top: -75px;
+  	right:-550px;
+  	border: 1px solid gray;
+  	border-radius: 20px;
+
+  }
+  .delete-comment:hover{
+  	background: gray;
+  	color: white;
+
+  }
+
+
+
+  /* Responsive styles */
+
+  @media (max-width: 800px){
+/* Make the paragraph in the comments take up the whole width,
+forcing the avatar and user info to wrap to the next line*/
+.comment p{
+	width: 100%;
+}
+
+	/* Reverse the order of elements in the user comments,
+	so that the avatar and info appear after the text. */
+	.comment.user-comment .info{
+		order: 3;
+		text-align: left;
+	}
+
+	.comment.user-comment .avatar{
+		order: 2;
+	}
+
+	.comment.user-comment p{
+		order: 1;
+	}
+
+
+	/* Align toward the beginning of the container (to the left)
+	all the elements inside the author comments. */
+	.comment.author-comment{
+		justify-content: flex-start;
+	}
+
+
+	.comment-section{
+		margin-top: 10px;
+	}
+
+	.comment .info{
+		width: auto;
+	}
+
+	.comment .info a{
+		padding-top: 15px;
+	}
+
+	.comment.user-comment .avatar,
+	.comment.author-comment .avatar{
+		padding: 15px 10px 0 18px;
+		width: auto;
+	}
+
+	.comment.user-comment p:after,
+	.comment.author-comment p:after{
+		width: 12px;
+		height: 12px;
+		top: initial;
+		left: 28px;
+		bottom: -6px;
+	}
+
+	.write-new{
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
+/*login, Contact, register forms style*/
+
+.forms {
+	box-shadow: 0 0 2px 2px;
+	margin: auto;
+	width: 500px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-top: 30px;
+} 
+/* Style inputs with type="text", select elements and textareas  from W3scools*/
+.forms input ,textarea{
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+.forms input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.forms input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+
+.create-container{
+	margin: auto;
+	width:50%;
+	margin-top: 50px;
+}
+
+
+.create-container form {
+	width: 100%;
+	padding: 20px;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 1px 1px 5px;
+}
+
+
+.create-container input, select, textarea {
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+
+}
+.create-container textarea{
+	height:  300px;
+}
+.create-container input[type=text],input[type=number]{
+
+	height: 25px;
+	font-size: 18px
+}
+.create-container input {
+	width: 200px;
+	padding: 5px;
+}
+
+.create-container select {
+	width: 100%;
+	padding: 7px 0;
+	background: transparent;
+}
+.create-container .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+	color: #1c87c9;
+}
+
+.create-container .item {
+	position: relative;
+	margin: 10px 0;
+}
+.create-container .img-div{
+	margin: 5px;
+	display: inline-block;
+	height: 100px;
+	width:100px;
+	background-position: center;
+	background-size: cover;
+} 
+
+.create-container input[type=radio]  {
+	display: none;
+}
+.create-container label.radio {
+	position: relative;
+	display: inline-block;
+	margin: 5px 20px 10px 0;
+	cursor: pointer;
+}
+.create-container .question span {
+	margin-left: 30px;
+}
+
+
+
+.create-container label.radio:after {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 8px;
+	height: 4px;
+	border: 3px solid #1c87c9;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+	opacity: 0;
+}
+.create-container input[type=radio]:checked + label:after {
+	opacity: 1;
+}
+.create-container .btn-block {
+	margin-top: 10px;
+	text-align: center;
+}
+.create-container button {
+	width: auto;
+	padding: 10px;
+	border: none;
+	border-radius: 5px; 
+	background: #1c87c9;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+}
+
+@media (min-width: 568px) {
+	.name-item, .contact-item, .position-item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.name-item input {
+		width: calc(50% - 20px);
+	}
+	.contact-item .item, .position-item .item {
+		width: calc(50% - 8px);
+	}
+	.contact-item input, .position-item input {
+		width: calc(100% - 12px);
+	}
+	.position-item select {
+		width: 100%;
+	}
+}
+
+
+.footer{
+	margin-top: 200px;
+}
+.footer p{
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
