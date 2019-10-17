@@ -5,6 +5,7 @@
 	<form action="{{ route('filter')}}" method="get">
 		<input type="hidden" name="string" value="{{ Request::get('string') }}">
 		<i style="background-color: antiquewhite;margin-right:10px;" > Filtrirajte artikle: </i>
+		<input type="hidden" name="category" value=" {{ Request::segment(1)=="categories" ? Request::segment(2) : Request::get('category') }} ">
 		<div class="filter-block">
 			<label>Cijena od :</label>
 			<input type="number" name="min" placeholder="KM" value="{{ old('min') }}">
