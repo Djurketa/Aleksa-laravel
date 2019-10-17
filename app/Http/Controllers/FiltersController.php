@@ -17,6 +17,11 @@ class FiltersController extends Controller
 		$query = $article->newQuery();
 		// By search string
 		$query->where('title', 'LIKE', '%' .$request->string . '%');
+		// By category
+		if($request->has('category')){
+			
+			$query->where('category_id',$request->category);
+		}
 		// If min price is not provided, asign 0
 		$request->min == null ? $request->min = 0 : $request->min;
 		// By price limits
