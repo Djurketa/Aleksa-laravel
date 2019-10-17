@@ -18,7 +18,7 @@ class FiltersController extends Controller
 		// By search string
 		$query->where('title', 'LIKE', '%' .$request->string . '%');
 		// By category
-		if($request->has('category')){
+		if($request->category >= 1){
 			
 			$query->where('category_id',$request->category);
 		}
